@@ -1,0 +1,15 @@
+<div id="footer_wrap">
+			<div id="footer" class="clearfix"></div>
+		</div>
+
+<script>
+window.onload = function() {
+ if (window.ApplePaySession) { //apple payが利用可能なsafariかどうか
+                if (ApplePaySession.canMakePaymentsWithActiveCard("MerchantID")) { //apple pay決済が可能かどうか
+                        //apple pay決済が可能な場合の処理
+                        var bnr=document.getElementById("※告知文のID名"); //IDの取得
+                        bnr.style.display='block'; //取得した要素を表示
+                }
+        }
+}
+</script>
