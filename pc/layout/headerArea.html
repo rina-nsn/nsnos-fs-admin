@@ -1,0 +1,229 @@
+<head>
+<!--css-->
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<!-- Java Script -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/elements_pc_bydrawer.js" charset="utf-8"></script>
+<script type="text/javascript" src="//r2.future-shop.jp/fs.nsnos/pc/recommend.js" charset="UTF-8"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCK5DPQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- 商品ページに使われているタブ機能ここから -->
+<script>
+$(function() {
+	//クリックしたときのファンクションをまとめて指定
+	$('.itemtabsp li').click(function() {
+
+		//.index()を使いクリックされたタブが何番目かを調べ、
+		//indexという変数に代入します。
+		var index = $('.itemtabsp li').index(this);
+
+		//コンテンツを一度すべて非表示にし、
+		$('.itemtabsp_content li').css('display','none');
+
+		//クリックされたタブと同じ順番のコンテンツを表示します。
+		$('.itemtabsp_content li').eq(index).css('display','block');
+
+		//一度タブについているクラスselectを消し、
+		$('.itemtabsp li').removeClass('itemtabsp_select');
+
+		//クリックされたタブのみにクラスselectをつけます。
+		$(this).addClass('itemtabsp_select')
+	});
+});
+</script>
+
+<!-- 商品ページに使われているタブ機能ここまで -->
+
+<!-- 会員情報保持用jsここから -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/shop/js/fs2api.js"></script>
+<script type="text/javascript">
+FS2.repeater({
+ssldomain: 'neversaynever.jp',
+shopKey: 'nsnos'
+});
+</script>
+<!-- 会員情報保持用jsここまで -->
+
+
+
+
+
+<script  type="text/javascript">
+// Loading
+$('head').append(
+  '<style type="text/css">#page { display: none; } #fade, #loading { display: block; }</style>'
+);
+jQuery.event.add(window,"load",function() { // 全ての読み込み完了後に呼ばれる関数
+  var pageH = $("#page").height();
+
+  $("#fade").css("height", pageH).delay(900).fadeOut(800);
+  $("#loading").delay(600).fadeOut(300);
+  $("#page").css("display", "block");
+  $("#bdBody").css("display", "block");
+});
+
+</script>
+
+
+<style type="text/css">
+
+/* =============
+loading
+============= */
+#loading {
+	position: absolute;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999999999999;
+}
+
+#loading img{
+	position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+#fade {
+	width: 100vw;
+  height: 100vh;
+	background-color: #fff;
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+}
+</style>
+
+</head>
+
+<!--▼body▼-->
+<div id="loading"><img src="/chacola/images/common/icon/loading.gif" alt="Loading..."></div>
+<div id="fade"></div>
+
+	<div id="bdHead">
+	<!--▼HEADER▼-->
+
+
+		<div id="firstStep">
+			<div class="logoArea">
+				<!--jsでブランド名置換-->
+			</div>
+			<div class="snsArea">
+				<!--jsでブランドのSNS置換-->
+			</div>
+		</div>
+
+<!--<div class="infoNotice">
+	<a href="/fs/nsnos/c/info_attention" style="">
+		<span>info</span>
+		5月18日(金)のお客様対応について
+	</a>
+</div>-->
+<!--<div class="infoNotice">
+	<a href="/fs/nsnos/c/info_attention#20180222" style="
+	">
+		<span>info</span>
+		2/23(金)お客様対応について
+	</a>
+</div>-->
+		<div id="secondStep">
+			<div class="naviHead">
+				<nav>
+					<ul class="menu">
+						<li class="menu__none" id="naviHeadNew"></li>
+						<li class="menu__none" id="naviHeadRanking"></li>
+						<li class="menu__mega">
+							<!--jsでブランドカテゴリー置換-->
+						</li>
+						<li class="menu__mega2">
+							<a href="#" class="init-bottom">BRAND</a>
+							<ul class="menu__second-level">
+								<li><a href="/fs/nsnos/c/marjour"><img src="/images/pc/header/logo_marjour.png" alt="marjour"></a></li>
+								<li><a href="/fs/nsnos/c/luzllena"><img src="/images/pc/header/logo_luzllena.png" alt="luzllena"></a></li>
+								<li><a href="/fs/nsnos/c/sunbabies"><img src="/images/pc/header/logo_sunbabies.png" alt="SUN BABIES"></a></li>
+								<li><a href="/fs/nsnos/c/lifeisatrip"><img src="/images/pc/header/logo_lifeisatrip.png" alt="Life is a trip"></a></li>
+								<li><a href="/fs/nsnos/c/collecala"><img src="/images/pc/header/logo_collecala.png" alt="colleca la"></a></li>
+								<li><a href="/fs/nsnos/c/chacola"><img src="/images/pc/header/logo_chacola.png" alt="CHACOLA"></a></li>
+							</ul>
+						</li>
+						<li class="menu__none">
+							<div class="infoHead">
+								<div class="bdtopIcon icon">
+									<a href="/">
+										<img src="/images/pc/header/top.png" alt="NEVER SAY NEVER Inc. ONLINE STORE top">
+									</a>
+									<p class="bdtopText text">ALL<br>BRAND</p>
+								</div>
+								<div class="guideIcon icon">
+									<a href="/fs/nsnos/c/info_shoppingguide">
+										<img src="/images/pc/header/info.png" alt="Shopping guide">
+									</a>
+									<p class="guideText text">Guide</p>
+								</div>
+								<div class="mypageIcon icon">
+									<a href="/fs/nsnos/MyPageTop.html">
+										<img src="/images/pc/header/mypage.png" alt="My Page">
+									</a>
+									<p class="mypageText text">My page</p>
+								</div>
+								<div class="mailIcon icon">
+									<a href="/fs/nsnos/c/info_conciergedesk">
+										<img src="/images/pc/header/mail.png" alt="お問い合わせ">
+									</a>
+									<p class="mailText text">お問い合わせ</p>
+								</div>
+								<div class="likeIcon icon">
+									<a href="/fs/nsnos/WishListLogin.html">
+										<img src="/images/pc/header/like.png" alt="お気に入り">
+									</a>
+									<p class="likeText text">お気に入り</p>
+								</div>
+								<div class="cartIcon icon">
+									<a href="/fs/nsnos/ShoppingCart.html">
+										<img src="/images/pc/header/cart.png" alt="Cart">
+									</a>
+									<p class="cartText text">Cart</p>
+								</div>
+								<div class="searchIcon icon">
+									<div id="openBtn">
+										<img src="/images/pc/header/sarch.png" alt="Search">
+									</div>
+									<p class="searchText text">Search</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+		</div>
+
+		<div id="searchHead">
+			<div class="searchBox">
+				<form action="/fs/nsnos/GoodsSearchList.html" method="get">
+					<input type="hidden" name="_e_k" value="Ａ" class="container">
+					<input type="text" name="keyword" value="" id="TARGET" class="keyword">
+					<input type="submit" value="Search" class="submit">
+				</form>
+			</div>
+		</div>
+
+
+	<!--▲HEADER▲-->
+	</div>
+
+	<div id="header"></div>
+	<div id="header_chacola_common"></div>
